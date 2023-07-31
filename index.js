@@ -11,25 +11,14 @@ app.listen(port, () => { console.log("Server is running on port 3000") })
 
 app.use(express.static("public"))
 
-var cHour = 0;
-var sec = 0;
-var min = 0;
 
-function getTime() {
-    let d = new Date();
-    sec = d.getSeconds();
-    min = d.getMinutes();
-    cHour = d.getHours();
-
-
-}
-setInterval(getTime, 1000)
 app.get("/", async (req, res) => {
     try {
         let response = await axios.get(API_URL);
         let data = response.data;
         let dayDescription;
-
+        let d = new Date();
+        let cHour = d.getHours();
         if (data.hourly.is_day[cHour]) {
             dayDescription = weatherListCode[data.hourly.weathercode[cHour]].day
         }
