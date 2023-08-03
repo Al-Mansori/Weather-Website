@@ -27,7 +27,6 @@ app.get("/", async (req, res) => {
         }
 
         res.render("index.ejs", {
-            // time: [cHour, min, sec],
             date: data.daily.time[0],
             dailyMaxTemperature: data.daily.temperature_2m_max[0],
             dailyMinTemperature: data.daily.temperature_2m_min[0],
