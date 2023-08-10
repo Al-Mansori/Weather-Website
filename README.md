@@ -22,7 +22,7 @@ cd Weather-Website
 npm i
 ```
 
-### Usage
+## Usage
 
 1. **Start the Application**:
 
