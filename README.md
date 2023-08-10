@@ -1,23 +1,36 @@
 # Weather-Website
-Weather Website
 
 Welcome to the Weather Website repository! This project is a simple web application that allows users to get weather information for various locations around the world. The application is built using HTML, CSS, and JavaScript and utilizes the OpenWeatherMap API to fetch real-time weather data.
 
+## Getting Started
 
-Clone this repository to your local machine using the following command:
+1. **Clone the Repository**: 
 
-```git clone https://github.com/Al-Mansori/Weather-Website.git```
+```bash
+git clone https://github.com/Al-Mansori/Weather-Website.git
+```
 
-Navigate to the project directory:
+2. **Navigate to the Directory**:
 
-```cd Weather-Website```
+```bash
+cd Weather-Website
+```
 
-to install node_modules/
+3. **Install Dependencies**:
 
-```npm i ```
+```bash
+npm i
+```
 
-to run the server
+### Usage
 
-```node index.js```
+1. **Start the Application**:
+
+   ```bash
+   node index.js
+   ```
+
+2. **Access the Application**: Open your web browser and navigate to `http://localhost:3000` to access the ToDoList application.
+
 
 That's it! You should now see the Weather Website running on your local machine.
