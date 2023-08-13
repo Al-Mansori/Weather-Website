@@ -1,36 +1,54 @@
-# Weather-Website
+# Weather Web App
 
-This project is a simple web application that allows users to get weather information for various locations around the world. The application is built using HTML, CSS, and JavaScript and utilizes the OpenWeatherMap API to fetch real-time weather data.
+This project is a simple web application that provides weather forecast information for a specific location. It utilizes the Open-Meteo API to fetch weather data and display it on a user-friendly interface. The application is built using modern JavaScript features and technologies.
+
+## Prerequisites
+
+Before running this application, make sure you have the following installed on your system:
+
+- Node.js (https://nodejs.org/)
 
 ## Getting Started
 
-1. **Clone the Repository**: 
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/Al-Mansori/Weather-Website.git
+git clone <repository_url>
+cd <repository_directory>
 ```
 
-2. **Navigate to the Directory**:
+2. Install dependencies:
 
 ```bash
-cd Weather-Website
+npm install
 ```
 
-3. **Install Dependencies**:
+3. Start the Application:
 
 ```bash
-npm i
+npm start
 ```
+
+The application will start and be accessible at `http://localhost:3000`.
+
+## Features
+
+- Displays current weather information and forecast data for a specific location.
+- Provides weather descriptions, temperature, UV index, precipitation probability, wind speed, and visibility.
+- Shows sunrise and sunset times for the location.
+- Fetches weather data from the Open-Meteo API.
 
 ## Usage
 
-1. **Start the Application**:
-   
-```bash
-node index.js
-```
+1. Open a web browser and navigate to `http://localhost:3000`.
 
-2. **Access the Application**: Open your web browser and navigate to `http://localhost:3000` to access the ToDoList application.
+2. The application will display the current weather information and forecast for the specified location.
 
+## Technologies Used
 
-That's it! You should now see the Weather Website running on your local machine.
+- Express.js: Web application framework for building the server.
+- EJS: Templating engine for rendering views.
+- Axios: HTTP client for making API requests.
+- Open-Meteo API: Provides weather forecast data.
+- JavaScript: Programming language for building the application.
+
