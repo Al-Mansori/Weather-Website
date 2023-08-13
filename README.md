@@ -26,7 +26,7 @@ npm install
 3. Start the Application:
 
 ```bash
-npm start
+node index.js
 ```
 
 The application will start and be accessible at `http://localhost:3000`.
