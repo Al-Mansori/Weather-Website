@@ -51,6 +51,45 @@ app.get("/", async (req, res) => {
 })
 
 
+app.get("/weather", async (req, res) => {
+    try {
+        let response = await axios.get(API_URL);
+        let data = response.data;
+        let dayDescription;
+        let d = new Date();
+        let cHour = d.getHours();
+        if (data.hourly.is_day[cHour]) {
+            dayDescription = weatherListCode[data.hourly.weathercode[cHour]].day
+        }
+        else {
+            dayDescription = weatherListCode[data.hourly.weathercode[cHour]].night
+        }
+
+        res.send({
+            date: data.daily.time[0],
+            dailyMaxTemperature: data.daily.temperature_2m_max[0],
+            dailyMinTemperature: data.daily.temperature_2m_min[0],
+            //dailyApparentMaxTemperature: data.daily.apparent_temperature_max[0],
+            //dailyApparentMinTemperature: data.daily.apparent_temperature_min[0],
+            dailySunRise: data.daily.sunrise[0],
+            dailySunSet: data.daily.sunset[0],
+            hourlyWeatherCode: dayDescription,
+            hourlyUvMaxIndex: data.hourly.uv_index[cHour],
+            hourlyPrecipitationProbability: data.hourly.precipitation_probability[cHour],
+            hourlyWindSpeed: data.hourly.windspeed_10m[cHour],
+            hourlyIs_day: data.hourly.is_day[cHour],
+            hourlyVisibility: data.hourly.visibility[cHour],
+            temperature: data.hourly.temperature_2m[cHour],
+            timezone: data.timezone,
+        });
+    } catch (error) {
+        console.error(error.message)
+        res.send(500)
+    }
+
+})
+
+
 
 //https://gist.github.com/stellasphere/9490c195ed2b53c707087c8c2db4ec0c
 let weatherListCode = {
