@@ -1,23 +1,54 @@
-# Weather-Website
-Weather Website
+# Weather Web App
 
-Welcome to the Weather Website repository! This project is a simple web application that allows users to get weather information for various locations around the world. The application is built using HTML, CSS, and JavaScript and utilizes the OpenWeatherMap API to fetch real-time weather data.
+This project is a simple web application that provides weather forecast information for a specific location. It utilizes the Open-Meteo API to fetch weather data and display it on a user-friendly interface. The application is built using modern JavaScript features and technologies.
 
+## Prerequisites
 
-Clone this repository to your local machine using the following command:
+Before running this application, make sure you have the following installed on your system:
 
-```git clone https://github.com/Al-Mansori/Weather-Website.git```
+- Node.js (https://nodejs.org/)
 
-Navigate to the project directory:
+## Getting Started
 
-```cd Weather-Website```
+1. Clone the repository:
 
-to install node_modules/
+```bash
+git clone <repository_url>
+cd <repository_directory>
+```
 
-```npm i ```
+2. Install dependencies:
 
-to run the server
+```bash
+npm install
+```
 
-```node index.js```
+3. Start the Application:
 
-That's it! You should now see the Weather Website running on your local machine.
+```bash
+node index.js
+```
+
+The application will start and be accessible at `http://localhost:3000`.
+
+## Features
+
+- Displays current weather information and forecast data for a specific location.
+- Provides weather descriptions, temperature, UV index, precipitation probability, wind speed, and visibility.
+- Shows sunrise and sunset times for the location.
+- Fetches weather data from the Open-Meteo API.
+
+## Usage
+
+1. Open a web browser and navigate to `http://localhost:3000`.
+
+2. The application will display the current weather information and forecast for the specified location.
+
+## Technologies Used
+
+- Express.js: Web application framework for building the server.
+- EJS: Templating engine for rendering views.
+- Axios: HTTP client for making API requests.
+- Open-Meteo API: Provides weather forecast data.
+- JavaScript: Programming language for building the application.
+
